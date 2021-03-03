@@ -1,5 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 *{
   margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Nunito', sans-serif;
+	color: #333;
+	height: 100vh;
+	background: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/*Layout*/
+main{
+	height: 90vh;
+	width: 90%;
+	background-color: rgba(255, 255, 255, 0.35);
+	backdrop-filter: blur(200px);
+  filter: blur();
+	box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+	display: flex;
+}
+
+.player{
+	flex: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 6rem;
+	transition: all 0.75s;
+}
+
+/*Elements*/
+.name{
+font-size: 2.85rem;
+font-weight: 300;
+letter-spacing: 1px;
+margin-bottom: 1rem;
+text-transform: uppercase;
+}
+.score{
+	font-size: 4rem;
+  font-weight: 300;
+  color: #c7365f;
+	margin-bottom: auto;
+}
+.current{
+	background-color: #c7365f;
+	padding: 1rem;
+  border-radius: 12px;
+  color: #fff;
+	width: 65%;
+	text-align: center;
+	opacity: 0.8;
+}
+.current-label{
+	text-transform: uppercase;
+  margin-bottom: 1rem;
+	font-size: 1.2rem;
+	color:#ddd;
+}
+.current-score{
+	font-size:1.2rem;
+}
+
+/*Absolute Positioned Elements*/
+.btn{
+  position: absolute;
+  left: 50%;
+  background: rgba(255,255,255,0.4);
+  border: 0;
+  transform: translateX(-50%);
+  color: #444;
+	text-transform: uppercase;
+	padding: 1rem 1.75rem;
+  border-radius: 2rem;
+  font-family: inherit;
+	box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(10px);
+	font-weight: 400;
+	cursor: pointer;
+	font-size: 1rem;
+}
+.btn:focus {
+  outline: none;
+}
+.btn:active{
+	transform: translate(-50%,4px);
+	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+.btn::first-letter{
+	font-size: 1.4rem;
+	display: inline-block;
+	margin-right: 4px;
+}
+.btn--new{
+	top: 8%;
+}
+.dice{
+	position: absolute;
+  height: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 35%;
+	box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+.btn--roll{
+	top:65%;
+}
+.btn--hold{
+	top: 78%;
+}
+//Manupulate with JS
+.hidden{
+	display: none;
+}
+.player--active {
+  background-color: rgba(255, 255, 255, 0.4);
 }
